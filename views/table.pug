@@ -1,0 +1,41 @@
+html
+  head
+    title Notes
+    link(rel="stylesheet" href="/assets/stylesheets/reset.css")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+    link(rel="stylesheet" href="/assets/stylesheets/application.css")
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+style.
+    .bs-example{
+    margin: 20px;
+    }
+    body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    background-color: rgb(17, 17, 17);
+    color: rgb(216, 216, 216);
+    }
+    .wrapper {
+    width: 600px;
+    margin: 20px auto 0;
+    text-align: center;
+    }
+
+body(class="expand")
+    block content
+
+    table.table.table-hover.table-dark.centered.wrapper
+      thead
+        tr
+          th  Path
+          th  Visits
+      tbody
+        each data in entries
+          tr
+            td= data._id
+            td= data.count
+
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
